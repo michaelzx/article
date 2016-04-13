@@ -149,8 +149,8 @@ This .ini contains simply a [main] section with some minimal configuration:
 </filter-mapping>
 ```
 
-* <listener> 节点定义了一个ServletContextListener，在web应用程序启动的生时候启动Shiro环境（包括shiro的SecurityManager）默认情况下, 这个listener会自动去找我们的`WEB-INF/shiro.ini`文件中Shiro的配置.
+* `<listener>` 节点定义了一个ServletContextListener，在web应用程序启动的生时候启动Shiro环境（包括shiro的SecurityManager）默认情况下, 这个listener会自动去找我们的`WEB-INF/shiro.ini`文件中Shiro的配置.
 
-* <filter> 节点定义了主要的ShiroFilter.这个filter被要求去过滤所有进入web应用程序的请求，因此shiro可以在一个请求到达应用程序之前进行必要的身份验证和访问控制。
+* `<filter>` 节点定义了主要的ShiroFilter.这个filter被要求去过滤所有进入web应用程序的请求，因此shiro可以在一个请求到达应用程序之前进行必要的身份验证和访问控制。
 
-* <filter-mapping> 节点确保所有请求类型通过被ShiroFilterare提出（filed）filter-mapping节点一般是不指定dispatcher元素的，但是shiro需要它们都被定义，以便它能够过滤所有可能被web应用执行的不同请求类型。
+* `<filter-mapping>` 节点确保所有请求类型通过被ShiroFilterare提出（filed）filter-mapping节点一般是不指定dispatcher元素的，但是shiro需要它们都被定义，以便它能够过滤所有可能被web应用执行的不同请求类型。
