@@ -11,7 +11,7 @@
 [概述](#概述)  
 [项目安装（初始化？）](#项目安装)  
 Step 1: [启用Shiro](#step1启用shiro)  
-Step 2: [链接用户信息](#step2连接用户信息)  
+Step 2: [连接用户信息](#step2连接用户信息)  
 Step 3: [启用登陆（Login）和注销（Logout）](#step3)  
 Step 4: [修改用户的特定界面](#step4)  
 Step 5: [只允许经过认证的用户访问](#step5)  
