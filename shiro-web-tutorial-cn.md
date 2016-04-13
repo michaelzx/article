@@ -10,7 +10,7 @@
 #内容列表
 [概述](#概述)  
 [项目安装（初始化？）](#项目安装)  
-Step 1: [启用Shiro](#Step 1:启用Shiro)  
+Step 1: [启用Shiro](#Step1:启用Shiro)  
 Step 2: [链接用户数据存储](#step2)  
 Step 3: [启用登陆（Login）和注销（Logout）](#step3)  
 Step 4: [修改用户的特定界面](#step4)  
@@ -90,7 +90,7 @@ $ mvn jetty:run
 
 通过 ctrl+C (在mac上cmd+c) 可以关闭这个web应用。
 
-#Step 1:启用Shiro
+#Step1:启用Shiro
 我们最初仓库中的master分支仅仅是一个简单的通用web应用程序，它可以作为任何应用程序的模板。接下来让我们给这个web应用程序启用最小化的shiro。
 
 执行下面git迁出目录来载入step1的分支：
