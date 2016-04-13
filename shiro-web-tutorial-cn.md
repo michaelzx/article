@@ -50,4 +50,24 @@ Apache Shiro的核心设计目标允许它被用于保护任何基于JVM的应�
 你开切换到已经克隆下来的文件夹，看看工程的结构：   
 `$ cd apache-shiro-tutorial-webapp`
 
+##3.回顾项目结构
+在你克隆仓库后，你现在的master分支将会有以下结构： 
+```
+apache-shiro-tutorial-webapp/
+  |-- src/
+  |  |-- main/
+  |    |-- resources/
+  |      |-- logback.xml
+  |    |-- webapp/
+  |      |-- WEB-INF/
+  |        |-- web.xml
+  |      |-- home.jsp
+  |      |-- include.jsp
+  |      |-- index.jsp
+  |-- .gitignore
+  |-- .travis.yml
+  |-- LICENSE
+  |-- README.md
+  |-- pom.xml
+```
 
