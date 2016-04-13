@@ -11,7 +11,7 @@
 [概述](#概述)  
 [项目安装（初始化？）](#项目安装)  
 Step 1: [启用Shiro](#step1启用shiro)  
-Step 2: [链接用户数据存储](#step2)  
+Step 2: [链接用户信息](#step2连接用户信息)  
 Step 3: [启用登陆（Login）和注销（Logout）](#step3)  
 Step 4: [修改用户的特定界面](#step4)  
 Step 5: [只允许经过认证的用户访问](#step5)  
@@ -154,3 +154,19 @@ This .ini contains simply a [main] section with some minimal configuration:
 * `<filter>` 节点定义了主要的ShiroFilter.这个filter被要求去过滤所有进入web应用程序的请求，因此shiro可以在一个请求到达应用程序之前进行必要的身份验证和访问控制。
 
 * `<filter-mapping>` 节点确保所有请求类型通过被ShiroFilterare提出（filed）filter-mapping节点一般是不指定dispatcher元素的，但是shiro需要它们都被定义，以便它能够过滤所有可能被web应用执行的不同请求类型。
+
+##1c: Run the webapp
+在签出step1分支后，继续运行web应用程序：
+```
+$ mvn jetty:run
+```
+这次你讲看到类似以下日志输出，表明shiro确实已经运行在你的web应用程序中：
+```
+16:04:19.807 [main] INFO  o.a.shiro.web.env.EnvironmentLoader - Starting Shiro environment initialization.
+16:04:19.904 [main] INFO  o.a.shiro.web.env.EnvironmentLoader - Shiro environment initialized in 95 ms.
+```
+按下ctrl+C (在mac上cmd+C)来关闭web应用程序
+
+#Step2:连接用户信息
+
+123123
