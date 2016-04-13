@@ -45,9 +45,10 @@ Apache Shiro的核心设计目标允许它被用于保护任何基于JVM的应�
 在GitHub，访问[tutorial project](https://github.com/lhazlewood/apache-shiro-tutorial-webapp)并点击右上角的Fork按钮。
 ##2.克隆你自己教程工程
 现在你已经fork了仓库到你自己的GitHub账号，把它克隆到你的本地：  
-`$ git clone git@github.com:$YOUR_GITHUB_USERNAME/apache-shiro-tutorial-webapp.git    
+`$ git clone git@github.com:$YOUR_GITHUB_USERNAME/apache-shiro-tutorial-webapp.git`
+
 ($YOUR_GITHUB_USERNAME应该是就是你自己的GitHub用户名)  
 你开切换到已经克隆下来的文件夹，看看工程的结构： 
-`$ cd apache-shiro-tutorial-webapp
+`$ cd apache-shiro-tutorial-webapp`
 
 
