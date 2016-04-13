@@ -102,5 +102,28 @@ $ git checkout step1
 1. 添加了一个新的`src/main/webapp/WEB-INF/shiro.ini file`被添加  
 2. `src/main/webapp/WEB-INF/web.xml`被修改了  
 
+##1a: 添加一个shiro.ini文件
+在web应用程序中可以通过很多方式对Shiro进行配置，在你使用的web和/或MVC框架都可以。举个例子，可以通过Spring，Guice，Tapestry，许多许多。
+
+暂时为了让事情简单些，我们通过shiro默认基于ini的配置启动一个shiro环境。
+
+如果你迁出了step1分支，你可以看到`src/main/webapp/WEB-INF/shiro.ini`这个新文件的内容()
+If you checked out the step1 branch, you’ll see the contents of this new src/main/webapp/WEB-INF/shiro.ini file (为了简洁删除了头部注释):
+```
+[main]
+# Let's use some in-memory caching to reduce the number of runtime lookups against Stormpath.
+# A real application might want to use a more robust caching solution (e.g. ehcache or a
+# distributed cache).  When using such caches, be aware of your cache TTL settings: too high
+# a TTL and the cache won't reflect any potential changes in Stormpath fast enough.  Too low
+# and the cache could evict too often, reducing performance.
+cacheManager = org.apache.shiro.cache.MemoryConstrainedCacheManager
+securityManager.cacheManager = $cacheManager
+```
+
+This .ini contains simply a [main] section with some minimal configuration:
+
+* 它定义了一个新的缓存管理实例. 缓存在Shiro的构架体系中是一个非常重要的部分 - 它减少了和数据存贮之间持续往返的通讯。这个例子是使用了在单个JVM上比较好使的MemoryConstrainedCacheManager。如果对你的应用是部署在多个服务器（比如服务器集群）的话，你将会想使用一个集群缓存管理器的实现来替代。
+* 它将这个新的缓存管理器实例配置到在安全管理器上。shiro安全管理器实例永远是存在的，所以它不需要进行显示声明。
+
 
 
