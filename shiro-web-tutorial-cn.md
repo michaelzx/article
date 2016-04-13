@@ -10,7 +10,7 @@
 #内容列表
 [概述](#概述)  
 [项目安装（初始化？）](#项目安装)  
-Step 1: [启用Shiro](#Step1:启用Shiro)  
+Step 1: [启用Shiro](#step1启用shiro)  
 Step 2: [链接用户数据存储](#step2)  
 Step 3: [启用登陆（Login）和注销（Logout）](#step3)  
 Step 4: [修改用户的特定界面](#step4)  
