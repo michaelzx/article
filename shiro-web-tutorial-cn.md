@@ -98,6 +98,9 @@ $ mvn jetty:run
 $ git checkout step1
 ```
 迁出这个分支后，你会发现2个变化：
-1. 添加了一个新的`src/main/webapp/WEB-INF/shiro.ini file`被添加
-2. `src/main/webapp/WEB-INF/web.xml`被修改了
+
+1. 添加了一个新的`src/main/webapp/WEB-INF/shiro.ini file`被添加  
+2. `src/main/webapp/WEB-INF/web.xml`被修改了  
+
+
 
