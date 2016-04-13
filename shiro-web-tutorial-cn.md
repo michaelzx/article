@@ -10,7 +10,7 @@
 #内容列表
 [概述](#概述)  
 [项目安装（初始化？）](#项目安装)  
-Step 1: [启用Shiro](#step1)  
+Step 1: [启用Shiro](#Step 1:启用Shiro)  
 Step 2: [链接用户数据存储](#step2)  
 Step 3: [启用登陆（Login）和注销（Logout）](#step3)  
 Step 4: [修改用户的特定界面](#step4)  
@@ -70,4 +70,34 @@ apache-shiro-tutorial-webapp/
   |-- README.md
   |-- pom.xml
 ```
+下面是每一个文件的含义：
+* pom.xml: Maven工程的构建文件. 它有一个配置好的Jetty，所以你可以通过运行`mvn jetty:run`来测试的web应用。
+* README.md: 一个简单项目说明文件
+* LICENSE: 项目的Apache 2.0授权文件
+* .travis.yml: A Travis CI config file in case you want to run continuous integration on your project to ensure it always builds.
+* .gitignore: git的忽略文件，包含一些不需要进入版本控制的后缀、文件夹等。
+* src/main/resources/logback.xml: 一个简单的后端日志配置文件.在本教程中，我们选择SLF4J作为我们的日志API和后端日志的实现. 这样可以是Log4J或者JUL.
+* src/main/webapp/WEB-INF/web.xml: 我们的初始化web.xml文件，我们将会马上对它进行配置来启用shiro。
+* src/main/webapp/include.jsp: 一个包含常规引用、声明、包含其他JSP页面的JSP页面。这允许我们在同一个地方合并引用和声明。
+* src/main/webapp/home.jsp: 我们web应用默认主页，包含include.jsp (as will others, as we will soon see).
+
+##4.运行web应用程序
+项目你已经克隆好工程，你可以通过下面的命令行来运行这个web应用程序：
+```
+$ mvn jetty:run 
+```
+下一步，打开的你的浏览器访问localhost:8080，你会看见一个显示`Hello, World!`欢迎词的主页。
+
+通过 ctrl+C (在mac上cmd+c) 可以关闭这个web应用。
+
+#Step 1:启用Shiro
+我们最初仓库中的master分支仅仅是一个简单的通用web应用程序，它可以作为任何应用程序的模板。接下来让我们给这个web应用程序启用最小化的shiro。
+
+执行下面git迁出目录来载入step1的分支：
+```
+$ git checkout step1
+```
+迁出这个分支后，你会发现2个变化：
+1. 添加了一个新的`src/main/webapp/WEB-INF/shiro.ini file`被添加
+2. `src/main/webapp/WEB-INF/web.xml`被修改了
 
