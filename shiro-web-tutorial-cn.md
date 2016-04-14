@@ -168,5 +168,28 @@ $ mvn jetty:run
 按下ctrl+C (在mac上cmd+C)来关闭web应用程序
 
 #Step2:连接用户信息
+执行以下git签出命令来加载step2分支：
+```
+$ git checkout step2
+```
+现在我们在web应用中集成了并运行了shiro，但是我们还未真真告诉shiro去干什么！
 
-123123
+在我们能够登陆、注销、执行基于角色或者基于权限的访问控制、任何安全相关的事情前，我们需要先有用户！
+
+我们需要配置Shiro访问某些类型的用户信息，这样它就能够查找用户实现登陆尝试，或检查安全策略的角色等。在任何一个应用中有很多类型的用户信息可能需要被访问：也许你把用户存在Mysql数据库中，也许在MongoDB中，也许你的公司把用户账号存在LDAP或者Active Directory中，也许你把他们存在一个简单的文件中，或者其他一些专用的数据存储中。
+
+Shiro通过一个叫Realm的东西来做到这个。在shiro的文档中：
+
+>Realms act as the ‘bridge’ or ‘connector’ between Shiro and your application’s security data. When it comes time to actually interact with security-related data like user accounts to perform authentication (login) and authorization (access control), Shiro looks up many of these things from one or more Realms configured for an application.
+
+>Realm在Shiro和你应用程序的安全数据之间充当“桥梁”或者“连接器”。当与安全相关的数据真正产生交互来实现身份验证（登陆）和授权（访问控制）的时候，Shiro为应用会在一个或者多个Realm配置中查找很多类似的东西。
+
+>In this sense a Realm is essentially a security-specific DAO: it encapsulates connection details for data sources and makes the associated data available to Shiro as needed. When configuring Shiro, you must specify at least one Realm to use for authentication and/or authorization. The SecurityManager may be configured with multiple Realms, but at least one is required.
+
+>在这个层面上来说Realm本质上是一个特别的安全DAO:它封装了数据源连接的细节，将给shiro提供所需要相关的数据。当配置Shrio的时候，你必须至少指定一个Realm用于身份验证和/或 授权。安全管理器（SecurityManager）可能配置了多个Realm，但是至少一个是必须的。
+
+>Shiro provides out-of-the-box Realms to connect to a number of security data sources (aka directories) such as LDAP, relational databases (JDBC), text configuration sources like INI and properties files, and more. You can plug-in your own Realm implementations to represent custom data sources if the default Realms do not meet your needs.
+
+>Shiro提供外置的Realm来连接一些安全数据源（又名目录？）如LDAP,关系数据库（JDBC）,类似ini和properties文件的文本配置源，还有其他许多。如果默认的Realm都不能满足你的需求，你可以插入你自己实现的Realm来作为自定义数据源
+
+
