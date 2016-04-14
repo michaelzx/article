@@ -192,4 +192,6 @@ Shiro通过一个叫Realm的东西来做到这个。在shiro的文档中：
 
 >Shiro提供外置的Realm来连接一些安全数据源（又名目录？）如LDAP,关系数据库（JDBC）,类似ini和properties文件的文本配置源，还有其他许多。如果默认的Realm都不能满足你的需求，你可以插入你自己实现的Realm来作为自定义数据源
 
+所以，我们需要配置一个Realm来让我们读取用户。
 
+##Set up Stormpath
