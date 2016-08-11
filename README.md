@@ -1,1 +1,1 @@
-[All in Wiki](/wiki)
+[All in Wiki](https://github.com/michaelzx/my-bookmark/wiki)
