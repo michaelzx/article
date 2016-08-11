@@ -1,0 +1,1 @@
+[All in Wiki](/wiki)
