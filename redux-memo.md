@@ -4,6 +4,7 @@
     - [可以加入异步请求](#可以加入异步请求)
     - [使用方方法](#使用方方法)
 - reducer
+- [搭配React](#搭配react)
 
 
 
@@ -84,3 +85,42 @@ const store = createStore(
 );
 ```
 更多可以参考<http://cn.redux.js.org/docs/advanced/AsyncActions.html>
+
+#搭配React
+```javascript
+import { connect } from 'react-redux'
+import { toggleTodo } from '../actions'
+import TodoList from '../components/TodoList'
+
+const getVisibleTodos = (todos, filter) => {
+  switch (filter) {
+    case 'SHOW_ALL':
+      return todos
+    case 'SHOW_COMPLETED':
+      return todos.filter(t => t.completed)
+    case 'SHOW_ACTIVE':
+      return todos.filter(t => !t.completed)
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    todos: getVisibleTodos(state.todos, state.visibilityFilter)
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onTodoClick: (id) => {
+      dispatch(toggleTodo(id))
+    }
+  }
+}
+
+const VisibleTodoList = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TodoList)
+
+export default VisibleTodoList
+```
