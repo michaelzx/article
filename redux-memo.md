@@ -4,7 +4,7 @@
   - [普通的actin](#普通的actin)
   - [使用了redux-thunk以后的action](#使用了redux-thunk以后的action)
     - [可以加入异步请求](#可以加入异步请求)
-    - [使用方方法](#使用方方法)
+    - [使用方法](#使用方法)
 - [搭配React](#搭配react)
 
 
