@@ -6,7 +6,7 @@
     - [可以加入异步请求](#可以加入异步请求)
     - [使用方法](#使用方法)
 - [搭配React](#搭配react)
-  - [React和Redux的连接react-redux](#React和Redux的连接react-redux)
+  - [React和Redux的连接react-redux](#react和redux的连接react-redux)
 
 
 
