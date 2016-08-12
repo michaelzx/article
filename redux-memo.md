@@ -6,6 +6,7 @@
     - [可以加入异步请求](#可以加入异步请求)
     - [使用方法](#使用方法)
 - [搭配React](#搭配react)
+  - [React和Redux的连接react-redux](#React和Redux的连接react-redux)
 
 
 
@@ -125,3 +126,4 @@ const VisibleTodoList = connect(
 
 export default VisibleTodoList
 ```
+####[React和Redux的连接react-redux](https://leozdgao.me/reacthe-reduxde-qiao-jie-react-redux/)
