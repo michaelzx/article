@@ -1,6 +1,8 @@
 - action
-  - 普通的actin
-  - 使用了redux-thunk（Middleware）以后的action
+  - [普通的actin](#普通的actin)
+  - [使用了redux-thunk以后的action](#使用了redux-thunk以后的action)
+    - [可以加入异步请求](#可以加入异步请求)
+    - [使用方方法](#使用方方法)
 - reducer
 
 
@@ -15,7 +17,7 @@ export function Foo(value) {
   }
 }
 ```
-##使用了redux-thunk（Middleware）以后的action
+##使用了redux-thunk以后的action
 ```javascript
 export function Foo() {
   return (dispatch, getState) => {
@@ -66,6 +68,7 @@ export function fetchPosts(subreddit) {
 }
 ```
 ###使用方法：
+redux-thunk是redux的一个middleware
 ```bash
 npm install --save redux-thunk
 ```
