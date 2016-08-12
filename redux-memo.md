@@ -1,15 +1,16 @@
+#Redux私人备忘录
+
 - action
   - [普通的actin](#普通的actin)
   - [使用了redux-thunk以后的action](#使用了redux-thunk以后的action)
     - [可以加入异步请求](#可以加入异步请求)
     - [使用方方法](#使用方方法)
-- reducer
 - [搭配React](#搭配react)
 
 
 
-#Action
-##普通的actin
+##Action
+####普通的actin
 ```javascript
 export function Foo(value) {
   return {
@@ -18,7 +19,7 @@ export function Foo(value) {
   }
 }
 ```
-##使用了redux-thunk以后的action
+####使用了redux-thunk以后的action
 ```javascript
 export function Foo() {
   return (dispatch, getState) => {
@@ -32,7 +33,7 @@ export function Foo() {
   }
 }
 ```
-###可以加入异步请求
+####可以加入异步请求
 ```javascript
 export function fetchPosts(subreddit) {
 
@@ -68,7 +69,7 @@ export function fetchPosts(subreddit) {
   }
 }
 ```
-###使用方法：
+####使用方法：
 redux-thunk是redux的一个middleware
 ```bash
 npm install --save redux-thunk
@@ -86,7 +87,7 @@ const store = createStore(
 ```
 更多可以参考<http://cn.redux.js.org/docs/advanced/AsyncActions.html>
 
-#搭配React
+##搭配React
 ```javascript
 import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
